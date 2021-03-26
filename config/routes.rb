@@ -7,4 +7,7 @@ Rails.application.routes.draw do
   post '/users/signup', to: 'users#signup' 
   post '/users/login', to: 'users#login'
 
+  post '/listings', to: 'listings#create'
+  post '/favorites', to: 'favorites#create'
+
 end
