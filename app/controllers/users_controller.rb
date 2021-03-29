@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
 
     def signup 
-        @user = User.create(user_params)
-        byebug
+        @user = User.create(name: params[:name], password: params[:password])
+        # byebug
         if @user.valid?
             render json: @user
         else 
@@ -11,14 +11,26 @@ class UsersController < ApplicationController
     end 
 
     def login 
-        @user = User.find_by(user_params)
-
-        if @user 
+        # byebug
+        @user = User.find_by(name: params[:name])
+        if @user.authenticate(params[:password])
                 render json: @user
         else
                 render json: false
         end  
     end 
+
+    def show
+        puts params
+        @user = User.find(params[:id])
+
+        if @user 
+            render json: @user
+        else
+            render json: false
+        end 
+    end
+
 
     private 
 

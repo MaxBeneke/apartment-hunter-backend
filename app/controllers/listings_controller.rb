@@ -3,8 +3,9 @@ class ListingsController < ApplicationController
     def create
         @listing = Listing.create(listing_params)
         if @listing.valid?
-            
-            @favorite = Favorite.create(user_id: params[:user_id], listing_id: @listing.id)
+            # byebug
+            # puts params[:user_id]
+            @favorite = Favorite.create(user_id: params[:user_id], listing_id: @listing.id, notes: params[:photo])
             render json: @listing
         else 
             render json: false
