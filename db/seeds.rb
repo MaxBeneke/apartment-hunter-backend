@@ -12,6 +12,11 @@ User.create(
   password: "123",
 )
 
+User.create(
+  name: 'Guest',
+  password: 'password'
+)
+
 Listing.create(
     price: 123,
     address: '123 Sesame St.',
