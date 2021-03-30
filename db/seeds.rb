@@ -25,8 +25,3 @@ Listing.create(
     baths: 1
 )
 
-Favorite.create(
-    notes: 'Wow is that Big Bird?',
-    user_id: 1,
-    listing_id: 1
-)
