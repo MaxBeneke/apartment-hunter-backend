@@ -21,7 +21,7 @@ class UsersController < ApplicationController
     end 
 
     def show
-        puts params
+        # puts params
         @user = User.find(params[:id])
 
         if @user 
@@ -31,6 +31,15 @@ class UsersController < ApplicationController
         end 
     end
 
+    def update
+        @user = User.find(params[:id])
+        @user.update( name: params[:name], password: params[:password])
+        if @user
+            render json: @user
+        else 
+            render json: false
+        end 
+    end 
 
     private 
 
