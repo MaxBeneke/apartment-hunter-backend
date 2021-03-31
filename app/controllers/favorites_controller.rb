@@ -10,6 +10,16 @@ class FavoritesController < ApplicationController
         end 
     end 
 
+    def update
+        @favorite = Favorite.find(params[:id])
+        @favorite.update(favorite_params)
+        if @favorite.valid?
+            render json: @favorite
+        else
+            render json: false
+        end
+    end
+
     def destroy
         @favorite = Favorite.find(params[:id])
         @favorite.destroy 
@@ -20,7 +30,7 @@ class FavoritesController < ApplicationController
     private
 
     def favorite_params
-        params.permit(:user_id, :listing_id ) #user_id, listing_id 
+        params.permit(:user_id, :listing_id, :notes, :id ) #user_id, listing_id 
     end 
 
 

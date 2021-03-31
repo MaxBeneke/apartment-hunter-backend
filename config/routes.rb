@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   post '/listings', to: 'listings#create'
   post '/favorites', to: 'favorites#create'
+  patch '/favorites/:id', to: 'favorites#update'
 
   delete '/favorite/:id', to: 'favorites#destroy'
 
