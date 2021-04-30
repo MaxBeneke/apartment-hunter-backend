@@ -1,24 +1,20 @@
-# README
+# Apartment//Hunter
+Apartment//Hunter is an apartment listing application in the same vein as Zillow or StreetEasy. Users can sign-in, search a list of apartments by ZIP code, and sort/filter those results with parameters like price, number of bathrooms, minimum square footage, etc. There's also a Google Maps integration that allows for users to see their listings appear on the map. They can also favorite their listings for later viewing.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Technologies
+This project is created with:
 
-Things you may want to cover:
+* React 16.8 (Hooks)
+* Rails 6
+* [Google Maps API](https://developers.google.com/maps/documentation/javascript/overview?hl=en) 
 
-* Ruby version
+# Setup
+To run this project locally using the standard Rails gems:
+```
+$ bundle install
+```
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Demo
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=BSCTo1A1hZk
+" target="_blank"><img src="http://img.youtube.com/vi/BSCTo1A1hZk/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
